@@ -1,7 +1,10 @@
 ﻿Console.Clear();
 
 string[] x = {"hello", "2", "world", ":-)"};
-
+Console.Write("Исходный массив: ");
+PrintArray(x);
+Console.Write("Преобразованный массив: ");
+PrintArray(NewArray(x, SizeNewArray(x)));
 
 int SizeNewArray(string[] firsArray)
 {
@@ -26,4 +29,13 @@ string[] NewArray(string[] firsArray, int size)
         }
     }
     return newArray;
+}
+
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++) 
+    {
+        Console.Write($"{array[i]}, ");
+    }
+    Console.WriteLine();
 }
